@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+    
     <title>Ejercicio 7 - Bulma</title>
 </head>
 <body class="has-navbar-fixed-top">
     <!--Portada Seccion hero-->
-    <section class="hero is-fullheight-with-navbar has-text-white portada-hero">
+    <section id="inicio"  class="hero is-fullheight-with-navbar has-text-white portada-hero">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1 has-text-black">
@@ -18,54 +19,69 @@
                 <h2 class="subtitle is-2 has-text-black">
                     El Rey del Rock and Roll
                 </h2>
-                <p class="is-size-4 has-text-weight-semibold mt-4 has-text-black">
-                    El Rey no ha muerto
-                </p>
             </div>
         </div>
     </section>
     <!--Comienzo barra de navegacion-->
-        <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="#" class="navbar-item">
-                        <img src="/assets/logo.png" alt="Logo Elvis Presley" style="max-height: 50px;">
-                    </a>
-                </div>
-                    <div id="navbar-completa" class="navbar-menu">
-                        <div class="navbar-start">
-                            <a href="#biografia-1" class="navbar-item">Biografia</a>
-                            <a href="#comienzos" class="navbar-item">Sus comienzos</a>
-<!--menu desplegable-->
-                                <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link">Su musica</a>
-                                        <div class="navbar-dropdown">
-                                            <a href="#musica-50" class="navbar-item">Años 50</a>
-                                            <a href="#musica-60" class="navbar-item">Años 60</a>
-                                            <a href="#musica-70" class="navbar-item">Años 70</a>
-                                            <a href="#discografia" class="navbar-item">Discografía</a>
-                                            <a href="#peliculas" class="navbar-item">Películas</a>
-                                        </div>
-                                </div>
+    <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#inicio" class="navbar-item">
+                    <img src="/assets/logo.png" alt="Logo Elvis Presley" style="max-height: 50px;">
+                </a>
+            
+            <!--Boton Hamburguesa-->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-completa">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbar-completa" class="navbar-menu">
+                <div class="navbar-start">
+            <!--Biografia/Menu desplegable -->
+                    <div id="biografia-dropdown-parent" class="navbar-item has-dropdown">
+                        <a class="navbar-link">Biografía</a>
+                        <div id="biografia-dropdown-menu" class="navbar-dropdown">
+                            <a href="#biografia-1" class="navbar-item dropdown-item-link">Ver Biografia</a>
+                            <a href="#comienzos" class="navbar-item dropdown-item-link">Sus comienzos</a>
+                            <a href="#musica-50" class="navbar-item dropdown-item-link">Años 50</a>
+                            <a href="#musica-60" class="navbar-item dropdown-item-link">Años 60</a>
+                            <a href="#musica-70" class="navbar-item dropdown-item-link">Años 70</a>
                         </div>
                     </div>
+    
+                    <a href="#discografia" class="navbar-item dropdown-item-link">Discografía</a>
+                    <a href="#peliculas" class="navbar-item dropdown-item-link">Filmografía</a>
+    
+                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    
         <!--Fin barra de navegacion-->
         
 <!--Seccion biografia-->
 <section id="biografia-1" class="section is-medium">
-    <div class="container container-biografia-1">
-        <h1 class="title has-text-centered">Biografia de Elvis Presley</h1>
+    <div class="container container-biografia-1 mt-6">
+        <h2 class="title has-text-centered titulo-biografia">Biografia de Elvis Presley</h1>
             <div class="columns is-vcentered" >
                 <div class="column is-6">
                     <div class="content">
-                        <p>En Tupelo, Misisipi, poco antes del amanecer, el 8 de enero de 1935 en una casa de dos habitaciones, Gladys Presley, da a luz a gemelos. El primero, Jessie Garon, nace muerto. El segundo, Elvis Aaron, nace vivo y sano. Elvis sería su único hijo.
-                        </p>
-                        <p>Con poco dinero, Vernon y Gladys hacen todo lo posible por mantener a su hijo, quien es el centro de sus vidas. Se mudan de casa en casa en Tupelo. Elvis asiste a la Iglesia de las Asambleas de Dios con su familia, y la música y la predicación le llegan profundamente. Las influencias de su infancia incluyen a los músicos de blues negros del barrio y los programas de radio de música country que disfrutaba su familia. 
-                        </p>
-                        <p>1948. Elvis toca la guitarra y canta "Leaf on a Tree" para su clase de la secundaria Milam en Tupelo como despedida. Elvis y sus padres guardan sus pertenencias en un baúl, lo atan al techo de su Plymouth de 1939 y se mudan a Memphis, Tennessee, en busca de una vida mejor. 
-                        </p>
+                        <ul class="bio-list">
+                            <li><strong>8 de enero de 1935 – Tupelo, Mississippi:</strong> Nacen gemelos. Jessie Garon nace muerto; Elvis Aaron nace sano y será hijo único.</li>
+                        
+                            <li><strong>Primeras influencias musicales:</strong> Asiste a la Iglesia Asamblea de Dios. El gospel, la predicación, el blues del barrio y la música country de la radio marcan su oído desde chico.</li>
+                        
+                            <li><strong>Adolescencia en Memphis (1948–1953):</strong> Viven en viviendas públicas del norte de la ciudad. La situación económica sigue siendo difícil.</li>
+                        
+                            <li><strong>Escuela y trabajo:</strong> Estudia en la preparatoria L.C. Humes y realiza distintos trabajos para ayudar a mantener a su familia.</li>
+                        
+                            <li><strong>Identidad musical en formación:</strong> Frecuenta Beale Street, absorbe blues y gospel afroamericano, y asiste a conciertos de gospel que duran toda la noche.</li>
+                        
+                            <li><strong>Un estilo propio desde joven:</strong> Cabello largo para la época, patillas y ropa llamativa. Siempre fue diferente al resto.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="column is-6">
@@ -75,26 +91,36 @@
                 </div>
             </div>
             <div class="content mt-4" id="biografia-2">
-                <p> 1948 - 1953. Elvis y sus padres viven en viviendas públicas  en los barrios pobres del norte de Memphis. La vida sigue siendo dura. Vernon y Gladys cambian de trabajo y Elvis asiste a la preparatoria LC Humes.</p>
-                <p>
-                    Elvis trabaja en diversos empleos para mantenerse a sí mismo y a sus padres.  La familia asiste a la Iglesia de la Asamblea de Dios.
-                </p> 
-                <p>
-                    El Elvis adolescente sigue siendo conocido por cantar con su guitarra. Compra su ropa en la calle Beale y se empapa del blues y el gospel negros que escucha allí. También es un público habitual en los conciertos de gospel que duran toda la noche, tanto para blancos como para negros, que se celebran en el centro. Lleva el pelo largo (en comparación con los estándares de la época) y engominado, y se deja crecer las patillas. Es muy diferente a los demás chicos. 
-                </p> 
+                <ul class="bio-list">
+                    <li><strong>Primeros trabajos:</strong> Elvis realiza distintos empleos para ayudar a mantenerse a sí mismo y colaborar con la economía familiar.</li>
+                    
+                    <li><strong>Beale Street y el descubrimiento musical:</strong> Compra su ropa en Beale Street y se empapa del blues y el gospel afroamericano que escucha en la zona.</li>
+                    <li><strong>Noches de gospel:</strong> Asiste con frecuencia a conciertos de gospel que duran toda la noche, abiertos tanto para público blanco como negro.</li>
+                    <li><strong>Un estilo que ya llamaba la atención:</strong> Cabello más largo de lo habitual para la época, engominado y con patillas. Desde adolescente, Elvis ya se veía diferente al resto.</li>
             </div>
     </div>
 </section>
 <!--Seccion Comienzos-->
 <section id="comienzos" class="section">
     <div class="container container-comienzos">
-        <h4 class="title is-4 has-text-centered mt-4">Sus comienzos</h4>
+        <h4 id="sus-comienzos"   class="title is-4 has-text-centered mt-6 titulo" >Sus comienzos</h4>
         <div class="columns is-vcentered" >
             <div class="column is-6 mt-4">
                 <div class="content">
-                    <p>1953 . Elvis trabaja en el taller de Parker Machinists justo después de graduarse. Ese verano, visita The Memphis Recording Service, sede del sello Sun, y graba un acetato de demostración de "My Happiness" y "That's When Your Heartaches Begin" como regalo de cumpleaños para su madre, Gladys. Sam Phillips graba a Elvis cantando "My Happiness" y "That's When Your Heartaches Begin"</p>
-                    <p>1954.Graba otro acetato de demostración en Sun Studio.  Elvis conoce a Scotty y Bill, pero nada conecta realmente hasta el 5 de julio, cuando, tras una sesión tediosa, Elvis y los chicos se lanzan a una versión acelerada de "That's All Right". Esta canción, acompañada de "Blue Moon of Kentucky", se convierte en el primero de cinco sencillos de las primeras canciones de Elvis grabadas y publicadas por el sello Sun. </p>
-                    <p>Aparecen por primera vez en "Louisiana Hayride", un programa de radio de música country en vivo, transmitido por KWKH Radio. En noviembre, Elvis firma un contrato de un año para 52 presentaciones los sábados por la noche. Esta es una gran oportunidad, pero a medida que crece la popularidad de Elvis, su compromiso con "Hayride" le impide viajar mucho fuera del sur para impulsar su carrera a mayor escala.</p>
+                    <ul class="bio-list">
+
+                        <li><strong>1953 – Primeras grabaciones:</strong> Tras graduarse, Elvis trabaja en el taller Parker Machinists. Ese verano entra a <strong>Memphis Recording Service (Sun Studio)</strong> y graba un acetato de demostración con “My Happiness” y “That’s When Your Heartaches Begin” como regalo para su madre, Gladys. Sam Phillips lo graba por primera vez.</li>
+                
+                        <li><strong>1954 – El momento que cambió todo:</strong>Conoce a <strong>Scotty Moore</strong> y <strong>Bill Black</strong>. El 5 de julio, improvisan una versión acelerada de <strong><em>“That’s All Right”</em></strong>. Junto a <em>“Blue Moon of Kentucky”</em>, se convierte en el primero de los sencillos que lanza Sun Records.</li>
+                    
+                        <li><strong>Salto a la radio:</strong> Debutan en el programa en vivo <strong>“Louisiana Hayride”</strong> por KWKH Radio. </li>
+                        
+                        <li><strong>20 de noviembre de 1955 – Contrato histórico:</strong> Elvis firma con <strong>RCA Records</strong>.  También se crea <strong>Elvis Presley Music, Inc.</strong> para manejar su catálogo musical.</li>
+                    
+                        <li><strong>23 de marzo de 1956 – Primer álbum:</strong> RCA lanza <strong><em>“Elvis Presley”</em></strong>, su primer disco, el cual  supera el millón de dólares en ventas, obteniendo su primer disco de oro.</li>
+                    
+                        <li><strong>Abril de 1956 – Hollywood llama:</strong> Elvis firma contrato cinematográfico con <strong>Hal Wallis y Paramount Pictures</strong> para protagonizar varias películas. Su debut en el cine sería <strong><em>“Love Me Tender”</em></strong>.</li>
+                    </ul>
                 </div>
             </div>
             <div class="column is-6 mt-2">
@@ -103,28 +129,31 @@
                 </figure>
             </div>
         </div>
-        <div class="content mt-4" id="comienzos">
-                <p>
-                    20/11/1955. Elvis firma su primer contrato con RCA Records. El Coronel Parker negocia la venta del contrato de Elvis con Sun a RCA, que incluye sus cinco sencillos de Sun y otras canciones. Al mismo tiempo, Elvis firma un contrato con Hill and Range Publishing Company, que creará una empresa independiente llamada Elvis Presley Music, Inc.
-                </p>
-                <p>
-                    23/03/1956. RCA lanza "Elvis Presley", el primer álbum de su discografía. Este álbum, pronto alcanzó el número 1 en la lista de álbumes pop de Billboard durante 10 semanas. Es el primer álbum de Elvis en superar el millón de dólares en ventas, lo que le valió su primer premio de oro. 
-                    Abril de 1956. Elvis firma un contrato para una película con Hal Wallis y Paramount Pictures. El contrato incluye opciones para seis películas más. Su primer pelicula fue  "Love Me Tender". 
-                </p> 
-                
-        </div>
     </div>
 </section>
 <!--Seccion Años 50-->
-<section id="musica-50" class="section">
-    <div class="container container-musica-50">
-        <h4 class="title is-4 has-text-centered mt-6">Años 50</h4>
+<section id="musica-50" class="section mt-6">
+    <div class="container container-musica-50" >
+        <h4 class="title is-4 has-text-centered mt-6 musica-50">Años 50</h4>
         <div class="columns is-vcentered" >
             <div class="column is-6">
                 <div class="content">
-                    <p>1956. Elvis aparece de nuevo en "The Milton Berle Show", esta vez en el estudio donde suele originarse el programa, acompañado por The Jordanaires, Scotty, Bill y DJ. Entre sus selecciones se encuentra una interpretación juguetona y sensual de "Hound Dog" que enloquece a los jóvenes del público y disgusta a la prensa y a algunos espectadores adultos. Esto no hace más que avivar aún más su aparentemente imparable popularidad. Continúan los viajes, las apariciones personales y los lanzamientos de nuevos discos. Para entonces, sus movimientos sensuales y su sonido con influencias negras estaban siendo condenados por ciertas facciones del establishment "moralmente preocupado" y la comunidad religiosa.</p>
-                    <p>Aparece en "The Steve Allen Show" de la NBC. Entre sus actuaciones de esta noche se encuentra una versión mucho más suave de "Hound Dog". Allen hace que Elvis se vista de corbata blanca y esmoquin negro con frac, y lo hace cantar la canción a un Basset Hound en vivo. Elvis, con su buen humor, lo acepta, pero no está muy contento. </p>
-                    <p>Comienza a rodar su primera película, "Love Me Tender", para Twentieth Century Fox. </p>
+                    <ul class="bio-list">
+
+                        <li><strong>1956 – Escándalo en televisión nacional:</strong> Elvis vuelve a aparecer en <strong>"The Milton Berle Show"</strong>. Su interpretación sensual y juguetona de <strong><em>“Hound Dog”</em></strong> enloquece al público joven, pero provoca críticas de la prensa y de sectores conservadores. Sus movimientos y su estilo influenciado por la música afroamericana comienzan a ser condenados por grupos religiosos y sectores “moralmente preocupados”.</li>
+                    
+                        <li><strong>1956 – Aparición en "The Steve Allen Show":</strong> En la NBC, Elvis interpreta una versión mucho más suave de <strong><em>“Hound Dog”</em></strong>. El presentador lo obliga a vestir esmoquin y cantarle la canción a un perro Basset Hound en vivo. Elvis lo toma con humor, aunque no estaba nada contento con la situación.</li>
+                    
+                        <li><strong>1956 – Debut en el cine:</strong> Comienza el rodaje de su primera película, <strong><em>“Love Me Tender”</em></strong>, producida por Twentieth Century Fox.</li>
+                    
+                        <li><strong>1957 – Graceland:</strong> Elvis compra la famosa <strong>Mansión Graceland</strong> para vivir junto a sus padres y su abuela paterna. </li>
+                    
+                        <li><strong>1957 – Concierto en Hawái:</strong> Se presenta en Hawái por primera vez. Este show sería también su <strong>última aparición pública antes de ingresar al ejército</strong>.</li>
+                    
+                        <li><strong>14 de agosto de 1958 – Pérdida de su madre:</strong> Gladys Presley fallece a los 46 años debido a una hepatitis. Su muerte marca profundamente a Elvis.</li>
+                    
+                        <li><strong>1959 – Conoce a Priscilla:</strong> Durante su estadía en el ejército en Alemania, Elvis conoce a <strong>Priscilla Beaulieu</strong> en una fiesta en la base aérea de Friedberg, donde ella vivía con su familia.</li>
+                    </ul>
                 </div>
             </div>
             <div class="column is-6">
@@ -133,56 +162,64 @@
                 </figure>
             </div>
         </div>
-        <div class="content mt-2">
-                <p>
-                    Elvis compra  la Mansión Graceland  para él, sus padres y su abuela paterna. No pasa su primera noche en Graceland hasta el 26 de junio de 1957. 
-                </p>
-                <p>
-                    Se presenta en Hawái por primera vez. Esta también sería su última aparición pública antes de ingresar al ejército.
-                </p> 
-                <p>
-                    Su madre fallece en la madrugada del 14 de agosto a los 46 años, de hepatitis. Es mismo mes, conoce a Priscilla Beaulieu en una fiesta en la base aérea de Friedberg, Alemania, donde ella vivía con su familia.
-                </p> 
-        </div>
+        
     </div>
 </section>
 <!--Seccion Años 60-->
-<section id="musica-60" class="section">
+<section class="section" id="musica-60" >
     <div class="container container-musica-60">
-        <h4 class="title is-4 has-text-centered mt-6">Años 60</h4>
-        <div class="columns is-vcentered" >
-            <div class="column is-6 mt-6">
+        <h4 class="title is-4 has-text-centered mt-6 musica-60">Años 60</h4>
+        <div class="columns is-vcentered mt-6" >
+            <div class="column is-6">
                 <div class="content">
-                    <p>1960. Los años de Elvis Army llegan a su fin. Es dado de baja oficialmente del servicio activo el 5 de marzo. Ha servido a su país como cualquier otro soldado, sin los privilegios especiales que su estatus de celebridad podría haberle otorgado, durante dos años. </p>
-                    <p>Recibe su cinturón negro de primer grado en karate, una afición que desarrolló durante su servicio militar. Elvis lleva el certificado en su cartera hasta su muerte. </p>
-                    <p>Comienza a grabar y rodar su séptima película, "Wild in the Country", que finalizará en enero. "GI Blues" se estrena a nivel nacional el 23 de noviembre con excelentes críticas y un gran éxito de taquilla, convirtiéndola en una de las mejores películas de Elvis de su carrera tras su retiro del ejército. Ocupó el segundo puesto en la lista de Variety durante la primera semana y durante todo el año. Para 1969, Variety informa que había recaudado 4,3 millones, igual que "The African Q".</p>
+                    <ul class="bio-list">
+
+                        <li><strong>5 de marzo de 1960 – Fin del servicio militar:</strong> Elvis es dado de baja oficialmente del ejército. Durante dos años sirvió como cualquier otro soldado, sin privilegios especiales pese a su fama mundial.</li>
+                    
+                        <li><strong>Pasión por el karate:</strong> Durante su estadía en Alemania desarrolló un gran interés por las artes marciales. Con el tiempo obtendría el <strong>cinturón negro de primer grado</strong> y siempre llevó su certificado en la cartera.</li>
+                    
+                        <li><strong>Regreso a Hollywood:</strong> Tras volver del servicio, retoma su carrera cinematográfica. Comienza a grabar y filmar <em>"Wild in the Country"</em>, su séptima película, cuyo rodaje finaliza en enero de 1961.</li>
+                    
+                        <li><strong>1960 – Estreno de <em>"GI Blues"</em>:</strong> La película se estrena a nivel nacional el <strong>23 de noviembre</strong> y se convierte en un gran éxito de taquilla. Fue una de sus producciones más destacadas tras el ejército, alcanzando los primeros puestos en las listas de recaudación de la revista <em>Variety</em>.</li>
+                    </ul>
                 </div>
             </div>
-            <div class="column is-6">
+            <div class="column is-6 mt-6">
                 <figure class="image is-4by3">
                     <img src="/assets/marriage.jpg" alt="Elvis Presley y Priscilla Beaulieu en su boda privada en Las Vegas">
                 </figure>
             </div>
         </div>
-        <div class="content mt-6" >
-                <p>1963.Comienza a grabar y rodar "Viva Las Vegas", coprotagonizada por Ann-Margret. Será su decimoquinta película. </p>
-                <p>1964. "Viva Las Vegas" se estrena a nivel nacional. Es una de las mejores películas de Elvis en los años 60, y las canciones de este disco también son mejores. </p>
-                <p>1967. Elvis se casó con Priscilla en una ceremonia privada con un pequeño grupo de familiares y amigos en el Hotel Aladdin de Las Vegas
-                1968.</p> 
-                <p>Nace Lisa Marie Presley el 1 de febrero en el Hospital General de Memphis. </p>
+        <div class="content" >
+            <ul class="bio-list">
+
+                <li><strong>1963 – Rodaje de "Viva Las Vegas":</strong> Elvis comienza a grabar y filmar <em>"Viva Las Vegas"</em>, coprotagonizada por Ann-Margret. Será su decimoquinta película.</li>
+            
+                <li><strong>1964 – Estreno de "Viva Las Vegas":</strong> La película se estrena a nivel nacional y se convierte en una de las producciones más recordadas de Elvis en los años 60. Su banda sonora también es considerada de las mejores de esa etapa.</li>
+            
+                <li><strong>1 de mayo de 1967 – Boda:</strong> Elvis se casa con Priscilla Beaulieu en una ceremonia privada en el Hotel Aladdin de Las Vegas, acompañados por un pequeño grupo de familiares y amigos.</li>
+            
+                <li><strong>1 de febrero de 1968 – Nacimiento de Lisa Marie:</strong> Nace Lisa Marie Presley en el Hospital General de Memphis, única hija de Elvis y Priscilla.</li>
+            
+            </ul>
         </div>
     </div>
 </section>
 <!--Seccion Años 70-->
 <section id="musica-70" class="section">
     <div class="container container-musica-70">
-        <h4 class="title is-4 has-text-centered mt-6">Años 70</h4>
+        <h4 class="title is-4 has-text-centered musica-70">Años 70</h4>
         <div class="columns is-vcentered" >
-            <div class="column is-6 mt-6">
+            <div class="column is-6">
                 <div class="content">
-                    <p>1972. Se formaliza la separación de Elvis y Priscilla. El divorcio está a punto de ocurrir. Elvis ha comenzado a salir con Linda Thompson, quien será su principal compañera hasta finales de 1976. </p>
-                    <p>Consiguió el segundo puesto en el ranking pop con el sencillo “Burning Love”, uno de sus discos más importantes de los últimos años. </p>
-                    <p>El álbum del concierto "Aloha from Hawaii" alcanza el número 1 en la lista de álbumes pop de Billboard. Es su primer álbum en alcanzar el número 1 desde la banda sonora de "Roustabout" en 1965. También será su último álbum en alcanzar el número 1 en la lista pop.</p>
+                    <ul class="bio-list">
+
+                        <li><strong>1972 – Separación:</strong> Se formaliza la separación de Elvis y Priscilla. El divorcio es inminente. Durante este período, Elvis comienza una relación con Linda Thompson, quien será su principal compañera hasta finales de 1976.</li>
+                    
+                        <li><strong>1972 – Éxito con "Burning Love":</strong> El sencillo <em>"Burning Love"</em> alcanza el segundo puesto en el ranking pop, convirtiéndose en uno de los mayores éxitos de sus últimos años de carrera.</li>
+                    
+                        <li><strong>1973 – "Aloha from Hawaii":</strong> El álbum en vivo del concierto <em>"Aloha from Hawaii"</em> llega al puesto número 1 en la lista de álbumes pop de Billboard. Es su primer número uno desde la banda sonora de <em>"Roustabout"</em> (1965) y también el último de su carrera en alcanzar esa posición.</li>
+                    </ul>
                 </div>
             </div>
             <div class="column is-6">
@@ -191,19 +228,27 @@
                 </figure>
             </div>
         </div>
-        <div class="content mt-4" id="comienzos">
-                <p>En los últimos años previos a la muerte de Elvis, realizó giras y grabaciones constantemente, llenando salas en todas partes y ganando su tercer y último Grammy. También actuó en un especial de televisión de la CBS llamado "Elvis en Concierto", que se emitió póstumamente. Para los amigos, familiares y fans de Elvis, 1977 sería un año trágico.</p>
-                <p>1977. Los conciertos del 19, 20 y 21 de junio fueron grabados por RCA para un próximo álbum en vivo y se grabaron en video para un especial de televisión de CBS-TV. El especial se llamará "Elvis en Concierto". Se emitirá por primera vez el 3 de octubre, tras el fallecimiento de Elvis en agosto. La cámara ofrece una imagen impactante del mal estado de salud de Elvis en sus últimos días, pero su voz es potente. </p>
-                <p>16-8-1977.Durante la madrugada del 16, se ocupa de los últimos detalles de la gira y se relaja con su familia y el personal. Esa noche volará a Portland, Maine, para dar un concierto allí el 17 y luego continuar con la gira programada. Se retira a su suite principal en Graceland alrededor de las 7:00 a. m. para descansar antes de su vuelo nocturno. A última hora de la mañana, Elvis Presley ha fallecido por insuficiencia cardíaca.  </p>
+        <div class="content">
+            <ul class="bio-list">
+
+                <li><strong>Últimos años – Trabajo incansable:</strong> En los años previos a su muerte, Elvis mantuvo un ritmo intenso de giras y grabaciones. Continuó llenando salas en todo el país y ganó su tercer y último premio Grammy. También participó en un especial de televisión de CBS titulado <em>"Elvis en Concierto"</em>, que sería emitido de manera póstuma.</li>
+            
+                <li><strong>Junio de 1977 – Últimas grabaciones en vivo:</strong> Los conciertos del 19, 20 y 21 de junio fueron grabados por RCA para un futuro álbum en vivo y filmados para el especial de CBS-TV <em>"Elvis en Concierto"</em>. El programa se emitió por primera vez el 3 de octubre de 1977, después de su fallecimiento. Las imágenes reflejan su delicado estado de salud, aunque su voz seguía siendo poderosa.</li>
+            
+                <li><strong>16 de agosto de 1977 – El final:</strong>Planeaba viajar esa noche a Portland, Maine, para un concierto el día 17. Se retira a descansar a su suite en Graceland por la mañana. Horas más tarde, Elvis Presley fallece por insuficiencia cardíaca. Tenía 42 años.</li>
+            </ul>
+            <p class="frase-final">
+                "El Rey no ha muerto… su música sigue viva en cada corazón que escucha rock and roll."
+            </p>
         </div>
     </div>
 </section>
 
 <!--Discografia-->
 <section id="discografia" class="section">
-    <div class="container mt-6">
-        <h3 class="title is-3 has-text-centered">Discografía</h3>
-        <div class="columns is-multiline is-centered">
+    <div class="container">
+        <h3 class="title is-3 has-text-centered discografia">Discografía</h3>
+        <div class="columns is-multiline is-centered is-mobile">
 <!--Inicio Cards Discografia-->
             <div class="column is-6-mobile is-4-tablet is-3-desktop is-2-widescreen">
                 <div class="card disco-card">
@@ -273,8 +318,6 @@
                 </div>
             </div>
         </div>
-
-        
 
         <div class="column is-6-mobile is-4-tablet is-3-desktop is-2-widescreen">
             <div class="card disco-card">
@@ -909,15 +952,15 @@
     </div>
 </section>
 <!--Filmografia-->
-<section id="peliculas" class="section">
-<div class="container mt-6">
-    <h3 class="title is-3 has-text-centered">Filmografía</h3>
+<section id="peliculas" class="section mt-6">
+<div class="container">
+    <h3 class="title is-3 has-text-centered filmografia">Filmografía</h3>
 
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-multiline is-centered is-mobile mt-6">
 
 <!-- Película -->
     <div class="column is-6-mobile is-4-tablet is-3-desktop is-2-widescreen">
-        <div class="card peli-card">
+        <div class="card peli-card mt-4">
             <div class="card-image">
                 <figure class="image peli-img">
                     <img src="/assets/filmografia/film-amametiernamente.jpg" alt="Amame tiernamente film">
@@ -1422,7 +1465,6 @@
     </div>
 </div>
 </section>
-
-
+<script src="index.js"></script>
 </body>
 </html>

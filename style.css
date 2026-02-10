@@ -1,6 +1,17 @@
-html {
-    scroll-behavior: smooth;
+html, body {
+    height: 100%;
 }
+body{
+    color:#3d4451;
+}
+
+@font-face {
+    font-family: "Hollow";
+    src: url("./assets/fonts/AdrenalineHollow.ttf") format("truetype") ;
+    font-weight: normal;
+    font-style: normal;
+}
+
 .portada-hero {
     background-image: url("./assets/Viva\ Las\ Vagas\ Wallpaper\ Elvis\ Presley.jpg");
     background-size: cover;
@@ -25,25 +36,95 @@ html {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-/* dropdown menu */
-/* Fondo dropdown */
-
-.navbar-dropdown {
-    background-color: #111;
-    border-top: 2px solid #d4af37;
+/*nav*/
+.nav-brand{
+    margin-right: 2rem;
+}
+.navbar > .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 
-.navbar-dropdown .navbar-item {
-    color: #fff;
-    transition: all 0.2s ease;
+/* dropdown menu Fondo dropdown */
+/* Fondo del dropdown y contenedor */
+.navbar-dropdown {
+    background-color: #363636 !important;
+    border-top: 2px solid #4a4a4a;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+/*Estilo base para todos los links (Navbar y Dropdown) */
+#navbar-completa .navbar-item, 
+#navbar-completa .navbar-link {
+    color: white !important;
+    background-color: transparent !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Efecto hover para todo el menú */
+#navbar-completa a.navbar-item:hover,
+#navbar-completa .navbar-link:hover,
+#navbar-completa .dropdown-item-link:hover {
+    background-color: #4a4a4a !important;
+    color: #ffd700 !important;
+    padding-left: 1.5rem !important;
+    cursor: pointer !important;
+}
+
+.navbar-item.has-dropdown.is-active .navbar-link,
+.navbar-item.has-dropdown:hover .navbar-link {
+    background-color: #4a4a4a !important;
+}
+
+/*Ajustes en secciones*/
+#biografia-1, #comienzos, #musica-50 {
+    min-height: 90vh; 
+    display: flex;
+    align-items: center; 
+    padding-top: 80px; 
+}
+
+#musica-70,
+#discografia,
+#peliculas {
+    padding-top: 100px !important; 
+    margin-top: 0;
+}
+
+.titulo-biografia,
+#sus-comienzos,
+.musica-50,
+.musica-60,
+.musica-70,
+.discografia,
+.filmografia {
+    font-family: "Hollow", sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #a9822a;
+    text-shadow: 0 1px 0 #e0c067,      /* brillo suave arriba */
+    0 2px 0 #c9a646,      /* dorado principal pegado */
+    0 4px 6px rgba(145,112,44,0.35), /* profundidad */
 }
 
 /* Hover dorado*/
 .navbar-dropdown .navbar-item:hover {
     background-color: #d4af37;
-    color: #000;
     padding-left: 1.5rem;
 }
+
+/*Frase final*/
+.frase-final {
+    margin-top: 2.5rem;
+    font-family: "Hollow", sans-serif; 
+    font-size: 1.2rem;
+    text-align: center;
+    color: #a9822a; 
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(190,145,55,0.35);
+}
+
 /* Disco cards */
 .disco-card {
     height: 100%;
@@ -103,4 +184,85 @@ html {
 
 }
 
+/*Media Queries*/
+/*navbar 1024 (separacion)*/
+@media screen and (min-width: 1023px) {
+    .navbar > .container {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+}
+/* Estilo para que las cards destaquen en Mobile/Tablet */
+@media screen and (max-width: 1023px) {
+    .disco-card, .peli-card {
+        background: linear-gradient(145deg, #999494, #4d4b4b) !important;
+        border: 1px solid #3d3d3d !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        overflow: hidden; 
+    }
+
+    .disco-card:active, .peli-card:active {
+        transform: scale(0.96);
+        border-color: #ffd700 !important;
+    }
+    .card-content p{
+        color: #ffffff;
+    }
+
+    .peli-titulo {
+        color: white !important;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .peli-anio, .disco-anio {
+        color: #ffd700 !important;
+        font-size: 0.75rem;
+        margin-top: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .section {
+        min-height: 95vh !important; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #musica-70 {
+        padding-top: 120px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Achico el texto de la portada */
+    .portada-hero .title {
+        font-size: 2.5rem !important;
+        margin-top: 1rem;
+    }
+    .portada-hero .subtitle {
+        font-size: 1.5rem !important;
+    }
+
+    /* Ajuste de la imagen de fondo para que  se vea mejor */
+    .portada-hero {
+        background-position: 50% center !important; 
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Achico las fotos de la biografía */
+    .section .column.is-6 figure.image {
+        max-width: 80%; 
+        margin: 0 auto !important; 
+    }
+
+    /* Reduzco el espacio entre secciones para que el scroll no sea infinito */
+    .section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
 
